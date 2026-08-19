@@ -1,0 +1,1 @@
+xdg-open src/assets/index.html
