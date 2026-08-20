@@ -12,11 +12,11 @@ Telegram Bot Client lets you talk to one or more Telegram bots through a familia
 
 The app ships in multiple forms:
 
-- **Native desktop app** — a small C++ shell built on [webview](https://github.com/webview/webview) that opens the UI in a native window (no browser, no Electron overhead). Available for Windows, Linux, and macOS.
+- **Native desktop app** — a small C++ shell built on [webview](https://github.com/webview/webview) that opens the UI in a native window (no browser, no Electron overhead). Available for Windows, Linux.
 - **Android app** — the same interface packaged for mobile.
 - **Plain web page** — the same interface opened directly in your default browser via `web.bat` / `web.sh`, for quick testing without installing anything.
 
-Prebuilt releases for Windows, Linux, macOS, and Android are available on the [Releases](../../releases) page.
+Prebuilt releases for Windows, Linux, and Android are available on the [Releases](../../releases) page.
 
 ## Features
 
@@ -25,7 +25,7 @@ Prebuilt releases for Windows, Linux, macOS, and Android are available on the [R
 - **Real-time updates** — long-polling against the Telegram Bot API (`getUpdates`) delivers new messages as they arrive, no manual refresh needed.
 - **Local-first storage** — bots, chats, and message history are saved in `localStorage`; nothing leaves your machine except direct calls to Telegram's API.
 - **Chat search** — quickly filter your chat list by name.
-- **Cross-platform** — native builds for Windows, Linux, macOS, and Android, plus a browser mode using the same codebase.
+- **Cross-platform** — native builds for Windows, Linux, and Android, plus a browser mode using the same codebase.
 - **Zero frontend dependencies** — plain HTML/CSS/JavaScript, no build step, no framework.
 
 ## How it works
@@ -42,7 +42,7 @@ All of this happens client-side — the app talks directly to `api.telegram.org`
 
 ### Download a release
 
-Grab the build for your platform (Windows, Linux, macOS, or Android) from the [Releases](../../releases) page and run it directly — no setup required.
+Grab the build for your platform (Windows, Linux, or Android) from the [Releases](../../releases) page and run it directly — no setup required.
 
 ### Run it as a web page
 
@@ -52,7 +52,7 @@ No installation required.
 # Windows
 web.bat
 
-# Linux / macOS
+# Linux
 ./web.sh
 ```
 
@@ -71,12 +71,12 @@ This simply opens `src/assets/index.html` in your default browser.
 │   │       ├── helpers.js      # Formatting, avatars, small utilities
 │   │       ├── storage.js      # localStorage persistence layer
 │   │       └── telegram-api.js # Thin wrapper around the Telegram Bot API
-│   ├── main.cpp                 # Native WebView shell (Windows/Linux/macOS)
+│   ├── main.cpp                 # Native WebView shell (Windows/Linux)
 │   └── resources/
 │       ├── resources.rc         # Windows resource script (icon, metadata)
 │       └── resources.o          # Compiled resource object
 ├── web.bat                      # Opens the UI in a browser (Windows)
-└── web.sh                       # Opens the UI in a browser (Linux/macOS)
+└── web.sh                       # Opens the UI in a browser (Linux)
 ```
 
 ## Tech stack
